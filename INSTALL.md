@@ -1,5 +1,4 @@
-Installation Instructions
-*************************
+# Installation Instructions
 
 Copyright (C) 1994, 1995, 1996, 1999, 2000, 2001, 2002, 2004, 2005 Free
 Software Foundation, Inc.
@@ -7,8 +6,7 @@ Software Foundation, Inc.
 This file is free documentation; the Free Software Foundation gives
 unlimited permission to copy, distribute and modify it.
 
-Basic Installation
-==================
+## Basic Installation
 
 These are generic installation instructions.
 
@@ -67,8 +65,7 @@ The simplest way to compile this package is:
      all sorts of other programs in order to regenerate files that came
      with the distribution.
 
-Compilers and Options
-=====================
+## Compilers and Options
 
 Some systems require unusual options for compilation or linking that the
 `configure' script does not know about.  Run `./configure --help' for
@@ -82,39 +79,37 @@ is an example:
 
    *Note Defining Variables::, for more details.
 
-Compiling For Multiple Architectures
-====================================
+## Compiling For Multiple Architectures
 
 You can compile the package for more than one kind of computer at the
 same time, by placing the object files for each architecture in their
-own directory.  To do this, you must use a version of `make' that
-supports the `VPATH' variable, such as GNU `make'.  `cd' to the
+own directory.  To do this, you must use a version of `make` that
+supports the `VPATH` variable, such as GNU `make`.  `cd` to the
 directory where you want the object files and executables to go and run
 the `configure' script.  `configure' automatically checks for the
-source code in the directory that `configure' is in and in `..'.
+source code in the directory that `configure' is in and in `..`.
 
-   If you have to use a `make' that does not support the `VPATH'
+   If you have to use a `make` that does not support the `VPATH`
 variable, you have to compile the package for one architecture at a
 time in the source code directory.  After you have installed the
 package for one architecture, use `make distclean' before reconfiguring
 for another architecture.
 
-Installation Names
-==================
+## Installation Names
 
-By default, `make install' will install the package's files in
-`/usr/local/bin', `/usr/local/man', etc.  You can specify an
-installation prefix other than `/usr/local' by giving `configure' the
-option `--prefix=PREFIX'.
+By default, `make install` will install the package's files in
+`/usr/local/bin`, `/usr/local/man`, etc.  You can specify an
+installation prefix other than `/usr/local` by giving `configure' the
+option `--prefix=PREFIX`.
 
    You can specify separate installation prefixes for
 architecture-specific files and architecture-independent files.  If you
-give `configure' the option `--exec-prefix=PREFIX', the package will
+give `configure' the option `--exec-prefix=PREFIX`, the package will
 use PREFIX as the prefix for installing programs and libraries.
 Documentation and other data files will still use the regular prefix.
 
    In addition, if you use an unusual directory layout you can give
-options like `--bindir=DIR' to specify different values for particular
+options like `--bindir=DIR` to specify different values for particular
 kinds of files.  Run `configure --help' for a list of the directories
 you can set and what kinds of files go in them.
 
@@ -122,8 +117,7 @@ you can set and what kinds of files go in them.
 with an extra prefix or suffix on their names by giving `configure' the
 option `--program-prefix=PREFIX' or `--program-suffix=SUFFIX'.
 
-Optional Features
-=================
+## Optional Features
 
 Some packages pay attention to `--enable-FEATURE' options to
 `configure', where FEATURE indicates an optional part of the package.
@@ -137,8 +131,7 @@ find the X include and library files automatically, but if it doesn't,
 you can use the `configure' options `--x-includes=DIR' and
 `--x-libraries=DIR' to specify their locations.
 
-Specifying the System Type
-==========================
+## Specifying the System Type
 
 There may be some features `configure' cannot figure out automatically,
 but needs to determine by the type of machine the package will run on.
@@ -167,8 +160,7 @@ platform different from the build platform, you should specify the
 "host" platform (i.e., that on which the generated programs will
 eventually be run) with `--host=TYPE'.
 
-Sharing Defaults
-================
+## Sharing Defaults
 
 If you want to set default values for `configure' scripts to share, you
 can create a site shell script called `config.site' that gives default
@@ -178,8 +170,7 @@ values for variables like `CC', `cache_file', and `prefix'.
 `CONFIG_SITE' environment variable to the location of the site script.
 A warning: not all `configure' scripts look for a site script.
 
-Defining Variables
-==================
+## Defining Variables
 
 Variables not defined in a site shell script can be set in the
 environment passed to `configure'.  However, some packages may run
@@ -197,40 +188,39 @@ overridden in the site shell script).  Here is a another example:
 Here the `CONFIG_SHELL=/bin/bash' operand causes subsequent
 configuration-related scripts to be executed by `/bin/bash'.
 
-`configure' Invocation
-======================
+## `configure` Invocation
 
-`configure' recognizes the following options to control how it operates.
+`configure` recognizes the following options to control how it operates.
 
-`--help'
-`-h'
-     Print a summary of the options to `configure', and exit.
+`--help`
+`-h`
+     Print a summary of the options to `configure', and exit.
 
-`--version'
-`-V'
-     Print the version of Autoconf used to generate the `configure'
+`--version`
+`-V`
+     Print the version of Autoconf used to generate the `configure'
      script, and exit.
 
-`--cache-file=FILE'
-     Enable the cache: use and save the results of the tests in FILE,
+`--cache-file=FILE`
+     Enable the cache: use and save the results of the tests in FILE,
      traditionally `config.cache'.  FILE defaults to `/dev/null' to
      disable caching.
 
 `--config-cache'
-`-C'
-     Alias for `--cache-file=config.cache'.
+`-C`
+     Alias for `--cache-file=config.cache`.
 
-`--quiet'
-`--silent'
-`-q'
-     Do not print messages saying which checks are being made.  To
+`--quiet`
+`--silent`
+`-q`
+     Do not print messages saying which checks are being made.  To
      suppress all normal output, redirect it to `/dev/null' (any error
      messages will still be shown).
 
-`--srcdir=DIR'
-     Look for the package's source code in directory DIR.  Usually
+`--srcdir=DIR`
+     Look for the package's source code in directory DIR.  Usually
      `configure' can determine that directory automatically.
 
-`configure' also accepts some other, not widely useful, options.  Run
-`configure --help' for more details.
+`configure` also accepts some other, not widely useful, options.  Run
+`configure --help` for more details.
 
